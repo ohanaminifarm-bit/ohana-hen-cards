@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ].filter(Boolean).join('\n');
 
     // Open mailto
-    window.location.href = `mailto:rsanguinetti@ohanaminifarm.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:info@ohanaminifarm.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     // Show success after short delay
     setTimeout(() => {
