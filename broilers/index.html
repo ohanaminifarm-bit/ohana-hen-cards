@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ohana Mini Farm — Meet the Meat Birds</title>
+  <meta name="description" content="50 pasture-raised Cornish Cross broilers from Ohana Mini Farm. Raised slow, fed clean, handled with care.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo" aria-label="Ohana Mini Farm home">
+        <svg width="42" height="42" viewBox="0 0 42 42" fill="none">
+          <!-- Pot/roaster shape as logo -->
+          <rect x="8" y="18" width="26" height="18" rx="4" fill="var(--color-primary)"/>
+          <rect x="6" y="16" width="30" height="5" rx="2.5" fill="var(--color-primary-hover)"/>
+          <path d="M15 16 Q16 10 21 9 Q26 10 27 16" stroke="var(--color-primary-hover)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- Steam -->
+          <path d="M16 8 Q17 5 16 3" stroke="var(--color-straw)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M21 7 Q22 4 21 2" stroke="var(--color-straw)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M26 8 Q27 5 26 3" stroke="var(--color-straw)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <!-- Handles -->
+          <rect x="3" y="20" width="5" height="3" rx="1.5" fill="var(--color-primary-hover)"/>
+          <rect x="34" y="20" width="5" height="3" rx="1.5" fill="var(--color-primary-hover)"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-name">Ohana Mini Farm</span>
+          <span class="logo-tagline">Meet the Meat Birds</span>
+        </div>
+      </a>
+      <div class="header-actions">
+        <span class="bird-count-badge"><span id="visible-count">50</span> birds</span>
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Pasture-raised · Non-GMO · Cornish Cross · Ohana Mini Farm</p>
+      <h1 class="hero-title">50 Broilers.<br>Raised Right.<br>No Shortcuts.</h1>
+      <p class="hero-sub">Every bird in every batch gets daily care, clean ground, non-GMO feed, and a name. Because chicken raised with intention tastes different — and it is.</p>
+
+      <!-- Farm practice badges -->
+      <div class="practice-badges">
+        <span class="badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Non-GMO Feed</span>
+        <span class="badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Pasture Pens</span>
+        <span class="badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>No Hormones</span>
+        <span class="badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Slow Growth</span>
+        <span class="badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Small Batches</span>
+        <span class="badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Daily Health Checks</span>
+      </div>
+    </div>
+    <div class="hero-grass" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" fill="none"><path d="M0 60 Q180 20 360 55 Q540 80 720 45 Q900 10 1080 55 Q1260 80 1440 50 L1440 80 L0 80Z" fill="var(--color-grass)"/></svg>
+    </div>
+  </section>
+
+  <!-- FILTERS -->
+  <section class="filters-section" id="flock">
+    <div class="filters-inner">
+      <div class="search-row">
+        <div class="search-wrap">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="text" id="search" placeholder="Search by name, trait, or batch…" aria-label="Search broilers">
+        </div>
+        <button class="reset-btn" id="reset-btn">Clear filters</button>
+      </div>
+
+      <div class="filter-chips" role="group" aria-label="Filter by batch">
+        <span class="filter-label">Batch:</span>
+        <button class="chip chip--active" data-filter="all">All 50</button>
+        <button class="chip" data-filter="1">Batch 1</button>
+        <button class="chip" data-filter="2">Batch 2</button>
+        <button class="chip" data-filter="3">Batch 3</button>
+        <button class="chip" data-filter="4">Batch 4</button>
+        <button class="chip" data-filter="5">Batch 5</button>
+      </div>
+
+      <div class="sort-row">
+        <span class="filter-label">Sort:</span>
+        <select id="sort-select" aria-label="Sort broilers">
+          <option value="id">Batch order</option>
+          <option value="name">Name A–Z</option>
+          <option value="weight">Heaviest first</option>
+          <option value="days">Fastest grower</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- BROILER GRID -->
+  <main class="hen-grid-section">
+    <div class="hen-grid" id="broiler-grid" role="list"></div>
+    <div class="empty-state" id="empty-state" hidden>
+      <div class="empty-hen">🍗</div>
+      <p>No birds found. Try a different search or batch filter.</p>
+    </div>
+  </main>
+
+  <!-- FARM PHILOSOPHY STRIP -->
+  <section class="philosophy-strip">
+    <div class="philosophy-inner">
+      <h2 class="philosophy-title">Our Goal Is Not Maximum Speed.</h2>
+      <p class="philosophy-text">It is producing chicken we are proud to feed our own family. Slow, steady growth produces better texture, better flavor, and healthier birds — and that's what every bird on this page represents.</p>
+      <div class="philosophy-stats">
+        <div class="phil-stat">
+          <span class="phil-stat-num">~56</span>
+          <span class="phil-stat-label">Days avg. to harvest</span>
+        </div>
+        <div class="phil-stat">
+          <span class="phil-stat-num">100%</span>
+          <span class="phil-stat-label">Non-GMO feed</span>
+        </div>
+        <div class="phil-stat">
+          <span class="phil-stat-num">0</span>
+          <span class="phil-stat-label">Added hormones</span>
+        </div>
+        <div class="phil-stat">
+          <span class="phil-stat-num">Daily</span>
+          <span class="phil-stat-label">Health checks</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <svg width="32" height="32" viewBox="0 0 42 42" fill="none">
+        <rect x="8" y="18" width="26" height="18" rx="4" fill="var(--color-primary)"/>
+        <rect x="6" y="16" width="30" height="5" rx="2.5" fill="var(--color-primary-hover)"/>
+        <path d="M15 16 Q16 10 21 9 Q26 10 27 16" stroke="var(--color-primary-hover)" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>
+      <p>Ohana Mini Farm &nbsp;·&nbsp; Pasture-raised with purpose &nbsp;·&nbsp; 50 birds, 5 batches</p>
+    </div>
+  </footer>
+
+  <script src="broilers-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
