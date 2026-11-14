@@ -139,9 +139,9 @@ p{text-wrap:pretty;max-width:68ch;}
 .product-link{font-size:var(--text-sm);font-weight:600;color:var(--color-primary);margin-top:var(--space-2);}
 
 /* ---- FARM VIDEO SECTION ---- */
-.farm-video-section{position:relative;height:60vh;min-height:400px;overflow:hidden;}
-.farm-video-wrap{position:relative;width:100%;height:100%;}
-.farm-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;}
+.farm-video-section{position:relative;min-height:400px;overflow:hidden;background:#111;}
+.farm-video-wrap{position:relative;width:100%;min-height:400px;aspect-ratio:16/9;}
+.farm-video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;background:#111;}
 .farm-video-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,25,10,0.75) 0%,rgba(15,25,10,0.45) 100%);}
 .farm-video-content{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:var(--space-8);z-index:2;gap:var(--space-6);}
 .farm-video-title{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:700;color:#fff;line-height:1.1;}
