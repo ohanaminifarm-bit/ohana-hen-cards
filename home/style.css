@@ -181,8 +181,31 @@ p{text-wrap:pretty;max-width:68ch;}
   .hero{min-height:80vh;}
 }
 @media (max-width:600px){
+  .header-inner{height:54px;padding:0 12px;gap:8px;}
+  .logo{gap:7px;min-width:0;}
+  .logo svg{width:32px;height:32px;flex:0 0 auto;}
+  .logo-name{font-size:.9rem;}
+  .logo-tagline{font-size:.7rem;}
+  .header-actions{gap:6px;}
+  .call-btn{padding:8px 12px;font-size:.85rem;white-space:nowrap;}
+  .theme-toggle{width:32px;height:32px;flex:0 0 auto;}
+
+  .hero{min-height:520px;height:72svh;max-height:650px;}
+  .hero-video{object-position:center center;}
+  .hero-content{padding:56px 20px 72px;}
+  .hero-title{font-size:clamp(2.2rem,10vw,3.25rem);}
+  .hero-sub{font-size:1rem;margin-bottom:24px;}
+  .hero-ctas{gap:10px;}
+  .hero-btn{padding:12px 20px;font-size:.95rem;}
+  .hero-grass svg{height:42px;}
+
   .trust-divider{display:none;}
   .trust-inner{gap:var(--space-3);}
-  .hero-title{font-size:clamp(2.2rem,8vw,3.5rem);}
   .contact-btn{width:100%;justify-content:center;}
+
+  .farm-video-section{min-height:0;height:auto;}
+  .farm-video-wrap{min-height:0;aspect-ratio:9/12;}
+  .farm-video{object-fit:contain;object-position:center;}
+  .farm-video-content{padding:24px 18px;gap:16px;}
+  .farm-video-title{font-size:clamp(1.8rem,8vw,2.5rem);}
 }
