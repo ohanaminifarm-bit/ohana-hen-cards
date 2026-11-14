@@ -214,3 +214,16 @@ p{text-wrap:pretty;max-width:68ch;}
   .farm-video-content{padding:24px 18px;gap:16px;}
   .farm-video-title{font-size:clamp(1.8rem,8vw,2.5rem);}
 }
+
+/* Keep scrolling inside one explicit viewport in the Google Sites embed.
+   In iOS, an auto-height document can outgrow the surrounding iframe. */
+html.is-embedded{height:100%;overflow:hidden;scroll-behavior:auto;}
+html.is-embedded body{height:100%;min-height:0;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;}
+.is-embedded .hero{min-height:min(92vh,900px);}
+.hero-video,.hero-overlay,.hero-grass,.farm-video,.farm-video-overlay{pointer-events:none;}
+@media (max-width:600px){
+  .is-embedded .hero{min-height:0;}
+  .farm-video-wrap{aspect-ratio:auto;min-height:320px;}
+  .farm-video-content{position:relative;min-height:320px;}
+  .product-grid,.pages-grid{grid-template-columns:minmax(0,1fr);}
+}
