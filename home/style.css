@@ -227,3 +227,35 @@ html.is-embedded body{height:100%;min-height:0;overflow-y:auto;overflow-x:hidden
   .farm-video-content{position:relative;min-height:320px;}
   .product-grid,.pages-grid{grid-template-columns:minmax(0,1fr);}
 }
+
+/* Google Sites scales this embed's height on phones. Keep the embedded
+   phone summary within that box; the full homepage remains available. */
+.mobile-explore{display:none;}
+@media (max-width:600px){
+  html.is-embedded{overflow:visible;height:auto;}
+  html.is-embedded body{height:auto;min-height:0;overflow:visible;}
+  .is-embedded .site-header{position:relative;}
+  .is-embedded .hero-video-wrap,.is-embedded .hero-grass,
+  .is-embedded .trust-strip,.is-embedded .farm-video-section,
+  .is-embedded .pages-section{display:none;}
+  .is-embedded .hero-content{padding:24px 16px;}
+  .is-embedded .hero-title{font-size:2rem;margin-bottom:16px;}
+  .is-embedded .hero-sub{display:none;}
+  .is-embedded .hero-eyebrow{font-size:.7rem;}
+  .is-embedded .hero-btn{padding:10px 14px;font-size:.85rem;}
+  .is-embedded .mobile-explore{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;padding:20px 12px;font-size:.85rem;font-weight:600;color:var(--color-primary);}
+  .is-embedded .mobile-explore a:first-child{flex-basis:100%;text-align:center;}
+  .is-embedded .products-section{padding:20px 12px;}
+  .is-embedded .section-sub{margin-bottom:20px;font-size:.85rem;}
+  .is-embedded .section-title{font-size:1.4rem;}
+  .is-embedded .product-grid{gap:14px;}
+  .is-embedded .product-photo{aspect-ratio:auto;height:100px;}
+  .is-embedded .product-body{padding:14px;gap:6px;}
+  .is-embedded .product-name{font-size:1.15rem;}
+  .is-embedded .product-desc,.is-embedded .product-link{font-size:.85rem;line-height:1.5;}
+  .is-embedded .contact-section{padding:24px 16px;}
+  .is-embedded .contact-sub{font-size:.85rem;margin-bottom:18px;}
+  .is-embedded .contact-title{font-size:1.4rem;}
+  .is-embedded .contact-actions{gap:10px;}
+  .is-embedded .contact-btn{padding:10px 14px;}
+}
